@@ -8,7 +8,9 @@ public class Calculator {
     BinaryOperator<Integer> multiply = (x, y) -> {return x * y;};
     BinaryOperator<Double> devide = (x, y) -> {return x / y;};
     UnaryOperator<Integer> pow = x -> {return x * x;};
-    UnaryOperator<Integer> abs = x -> {if (x>0) return x; if (x<0) return -1*x;};
+    UnaryOperator<Integer> abs = x -> {if (x>0) return x 
+        else if (x<0) return -1*x
+            else return 0;};                    // данный блок, как и инструкцию предыдущей версии необходимо заключить в фигурные скобочки.
     Predicate<Integer> isPositive = x -> x > 0;
     Consumer<Integer> println = System.out::println;
 }
